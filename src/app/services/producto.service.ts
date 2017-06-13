@@ -37,7 +37,6 @@ export class ProductoService{
 			for(var i = 0; i < files.length; i++){
 				formData.append('uploads[]', files[i], files[i].name);
 			}
-
 			xhr.onreadystatechange = function(){
 				if(xhr.readyState == 4){
 					if(xhr.status == 200){
@@ -47,12 +46,8 @@ export class ProductoService{
 					}
 				}
 			};
-
 			xhr.open("POST", url, true);
 			xhr.send(formData);
 		});
-
-
-
     }
   }
